@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider, useApp } from '@/contexts/AppContext';
 import { ToastProvider } from '@/components/ui/Toast';
 import { AppLayout } from '@/components/layout/AppLayout';
@@ -56,12 +56,12 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ToastProvider>
         <AppProvider>
           <AppRoutes />
         </AppProvider>
       </ToastProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
